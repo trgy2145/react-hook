@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+//import './index.css'
+
+// import { useState } from 'react'
+// import ClassComponent from './components/ClassComponent'
+// import FunctionalComponent from './components/FunctionalComponent'
+import Users from './components/Users'
 
 function App() {
+  // const [classComp, setClassComp] = useState(true)
+  // const [funcComp, setFuncComp] = useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+     {/*  <button onClick={() => setClassComp(!classComp)}>Toggle Class Comp</button>
+      {classComp && <ClassComponent />}  
+      <button onClick={() => setFuncComp(!funcComp)}>Toggle Func Comp</button>
+      {funcComp && <FunctionalComponent />} */}
+      
+      <Users/>
+    
+
     </div>
-  );
+  )
 }
+
 
 export default App;
