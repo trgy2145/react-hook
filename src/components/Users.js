@@ -1,5 +1,5 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
 
 const Users = () => {
   const [users, setUsers] = useState([])
@@ -10,21 +10,11 @@ const Users = () => {
     { id: 13, name: 'miles tone' }
   ]
   const getUsers =()=>{
-    //!fetch ile veri cekme
-    /*  fetch('https://jsonplaceholder.typicode.com/users')
-    .then((res) => res.json())
-    .then((json) => setUsers(json)) //! veriyi users a attık
-    .catch((err) =>console.log(err))  */
-
-    //! axiosla veri çekme
    axios.get('https://jsonplaceholder.typicode.com/users')
     .then((res) => setUsers(res.data))
     .catch((err)=>console.log(err)) 
-    //! axiosun diğer kullanım sekli obje gibi
-    /* axios({
-      url:'https://jsonplaceholder.typicode.com/users',
-      method:'GET'
-    }).then((res) => setUsers(res.data)) */
+   
+
   
   } 
   //!use effect ile
